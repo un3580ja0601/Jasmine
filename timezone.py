@@ -1,5 +1,5 @@
 import requests
-
+;0
 valid_zones = [
     "America/New_York",
     "Europe/London",
