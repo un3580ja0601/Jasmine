@@ -30,9 +30,28 @@ if timezone not in all_timezones: #conditional
 else:
     time_data = get_city_time(timezone) #function call
 
-if time_data is None:
-    print("Error retrieving time.")
-else:
-    print("\nTime Zone:", time_data["timeZone"])
-    print("Current Time:", f'{time_data["hour"]}:{time_data["minute"]}')
-    print("Date:", f'{time_data["month"]}/{time_data["day"]}/{time_data["year"]}')
+    if time_data is None:
+        print("Error, could not retrieve time.")
+    else:
+        format_choice = input("Do you want millitary or regular time format? (m/r): ")
+
+        hour = time_data["hour"]
+        minute = time_data["minute"]
+
+        if format_choice == "r":
+            suffix = "AM"
+            if hour == 0:
+                hour = 12
+            elif hour == 12:
+                suffix = "PM"
+            elif hour > 12:
+                hour -= 12
+                suffix = "PM"
+
+            print("\nTime Zone:", time_data["timeZone"])
+            print("Current Time:", f"{hour}:{minute:02d} {suffix}")
+        else:
+            print("\nTime Zone:", time_data["timeZone"])
+            print("Current Time:", f"{hour}:{minute:02d}")
+
+        print("Date:", f'{time_data["month"]}/{time_data["day"]}/{time_data["year"]}')
