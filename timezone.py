@@ -23,7 +23,8 @@ def get_city_time(timezone): #procedural abstraction & parameter
 all_timezones = get_all_timezones() #function call
 
 
-timezone = input("Enter ANY valid time zone (example: America/New_York): ") #input
+timezone = input("Enter ANY valid time zone (example: America/New_York, Asia/Shanghai, Australia/Sydney, Europe/Rome): ").strip()
+ #input
 
 if timezone not in all_timezones: #conditional
     print("Invalid time zone.")
