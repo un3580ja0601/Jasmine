@@ -63,3 +63,4 @@ while True:
         print("Current Time:", f"{hour}:{minute:02d}")
 
     print("Date:", f'{time_data["month"]}/{time_data["day"]}/{time_data["year"]}')
+    print("Type exit to end the program.")
