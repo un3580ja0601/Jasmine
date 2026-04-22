@@ -1,5 +1,5 @@
 # Code line added by Jasmine Ung
-user_mood = input("What's your mood?: ")
+user_mood = input("What's your mood? (calm, energetic, sad, happy, loving): ")
 
 # This list stores songs and their moods.
 # Using a list keeps the program simpler because we can store multiple songs instead of creating separate variables for each song.
@@ -41,7 +41,7 @@ def matchsong(songs, mood):
                 matching = []
             matching.append(song[0])
 
-      return matching
+    return matching
 
 
 result = matchsong(songs, user_mood)
