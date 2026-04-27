@@ -18,7 +18,7 @@ songs = [
 ]
 
 '''
-Jasmine Ung developed function
+Student developed function
 
 Takes in a list of songs and a mood.
 
@@ -26,7 +26,7 @@ parameters:
 songs - a list of [song name, mood] pairs (strings)
 mood - the mood used to filter songs
 
-return:
+return type:
 list or None - a list of song names that match the mood,
 or None if no matches are found
 '''
