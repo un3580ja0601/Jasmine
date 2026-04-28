@@ -1,4 +1,3 @@
-# Code line added by Jasmine Ung
 user_mood = input("What's your mood? (calm, energetic, sad, happy, loving): ")
 
 # This list stores songs and their moods.
